@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Learning Hub - Modern AI Education Platform</title>
+
+  <!-- Font modern untuk tampilan profesional -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN (tanpa instalasi) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Outfit", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-sky-50 font-sans text-slate-800 selection:bg-cyan-200">
+  <!-- HEADER: Berisi navbar fixed + hero section -->
+  <header id="home" class="relative overflow-hidden">
+    <!-- Background glow futuristik -->
+    <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.35),transparent_40%),radial-gradient(circle_at_80%_10%,rgba(99,102,241,0.25),transparent_35%),radial-gradient(circle_at_50%_100%,rgba(6,182,212,0.25),transparent_40%)]"></div>
+
+    <!-- NAV: Fixed top, responsive, dengan hamburger sederhana menggunakan details/summary -->
+    <nav class="fixed inset-x-0 top-0 z-50 border-b border-sky-200 bg-white/90 backdrop-blur-md">
+      <div class="mx-auto flex w-[92%] max-w-7xl items-center justify-between py-3">
+        <a href="#home" class="text-lg font-bold tracking-wide text-sky-700 md:text-xl">AI Learning Hub</a>
+
+        <!-- Menu desktop -->
+        <ul class="hidden items-center gap-2 md:flex">
+          <li><a href="#home" class="rounded-lg px-4 py-2 text-slate-700 transition hover:bg-sky-500/15 hover:text-sky-700">Home</a></li>
+          <li><a href="#videos" class="rounded-lg px-4 py-2 text-slate-700 transition hover:bg-sky-500/15 hover:text-sky-700">Videos</a></li>
+          <li><a href="#about" class="rounded-lg px-4 py-2 text-slate-700 transition hover:bg-sky-500/15 hover:text-sky-700">About</a></li>
+          <li><a href="#contact" class="rounded-lg px-4 py-2 text-slate-700 transition hover:bg-sky-500/15 hover:text-sky-700">Contact</a></li>
+        </ul>
+
+        <!-- Menu mobile (hamburger sederhana) -->
+        <details class="md:hidden">
+          <summary class="cursor-pointer list-none rounded-lg border border-sky-300 px-3 py-2 text-sm text-slate-700">
+            Menu
+          </summary>
+          <ul class="absolute right-4 mt-2 w-44 space-y-1 rounded-xl border border-sky-200 bg-white p-2 shadow-xl">
+            <li><a href="#home" class="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-sky-500/15">Home</a></li>
+            <li><a href="#videos" class="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-sky-500/15">Videos</a></li>
+            <li><a href="#about" class="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-sky-500/15">About</a></li>
+            <li><a href="#contact" class="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-sky-500/15">Contact</a></li>
+          </ul>
+        </details>
+      </div>
+    </nav>
+
+    <!-- HERO: Headline utama platform -->
+    <section class="mx-auto w-[92%] max-w-7xl pb-20 pt-36 md:pt-40">
+      <div class="max-w-3xl">
+        <p class="mb-3 inline-block rounded-full border border-cyan-400/35 bg-cyan-400/10 px-4 py-1 text-xs font-medium uppercase tracking-widest text-sky-700">
+          Modern AI Education Platform
+        </p>
+        <h1 class="text-4xl font-extrabold leading-tight md:text-6xl">
+          AI Learning Hub
+        </h1>
+        <p class="mt-5 max-w-2xl text-base text-slate-600 md:text-lg">
+          Platform Edukasi Artificial Intelligence untuk belajar dari konsep dasar hingga implementasi nyata melalui konten video terstruktur.
+        </p>
+        <a href="#videos" class="mt-8 inline-flex rounded-xl bg-gradient-to-r from-sky-500 to-cyan-500 px-6 py-3 font-semibold text-white shadow-lg shadow-indigo-900/40 transition hover:scale-105 hover:shadow-xl hover:shadow-indigo-700/40">
+          Mulai Belajar
+        </a>
+      </div>
+    </section>
+  </header>
+
+  <!-- MAIN: Konten utama website -->
+  <main>
+    <!-- SECTION VIDEO: Fokus utama platform -->
+    <section id="videos" class="scroll-mt-24 py-16">
+      <div class="mx-auto w-[92%] max-w-7xl">
+        <h2 class="text-3xl font-bold">Video Pembelajaran AI</h2>
+        <p class="mt-2 text-slate-600">Klik salah satu video untuk melihat detail pembelajaran.</p>
+
+        <!-- Grid responsive: 1 kolom mobile, 3 kolom desktop -->
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- ARTICLE CARD 1 -->
+          <article>
+            <a href="video-detail.html#pengenalan-ai" class="group block overflow-hidden rounded-2xl border border-sky-200 bg-white shadow-lg shadow-sky-100 transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-sky-300/60">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" alt="Thumbnail Pengenalan AI" class="h-44 w-full object-cover" />
+              <div class="p-4">
+                <h3 class="text-xl font-semibold text-sky-700">Pengenalan AI</h3>
+                <p class="mt-2 text-sm text-slate-600">Memahami definisi, sejarah, dan perkembangan awal Artificial Intelligence.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- ARTICLE CARD 2 -->
+          <article>
+            <a href="video-detail.html#machine-learning" class="group block overflow-hidden rounded-2xl border border-sky-200 bg-white shadow-lg shadow-sky-100 transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-sky-300/60">
+              <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop" alt="Thumbnail Machine Learning" class="h-44 w-full object-cover" />
+              <div class="p-4">
+                <h3 class="text-xl font-semibold text-sky-700">Machine Learning</h3>
+                <p class="mt-2 text-sm text-slate-600">Belajar bagaimana algoritma memproses data untuk membuat prediksi.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- ARTICLE CARD 3 -->
+          <article>
+            <a href="video-detail.html#deep-learning" class="group block overflow-hidden rounded-2xl border border-sky-200 bg-white shadow-lg shadow-sky-100 transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-sky-300/60">
+              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop" alt="Thumbnail Deep Learning" class="h-44 w-full object-cover" />
+              <div class="p-4">
+                <h3 class="text-xl font-semibold text-sky-700">Deep Learning</h3>
+                <p class="mt-2 text-sm text-slate-600">Eksplorasi neural network untuk pengolahan data kompleks seperti gambar dan suara.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- ARTICLE CARD 4 -->
+          <article>
+            <a href="video-detail.html#cybersecurity-ai" class="group block overflow-hidden rounded-2xl border border-sky-200 bg-white shadow-lg shadow-sky-100 transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-sky-300/60">
+              <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=1200&auto=format&fit=crop" alt="Thumbnail Cybersecurity dan AI" class="h-44 w-full object-cover" />
+              <div class="p-4">
+                <h3 class="text-xl font-semibold text-sky-700">Cybersecurity dan AI</h3>
+                <p class="mt-2 text-sm text-slate-600">Peran AI dalam deteksi ancaman dan proteksi sistem keamanan digital modern.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- ARTICLE CARD 5 -->
+          <article>
+            <a href="video-detail.html#ai-bisnis" class="group block overflow-hidden rounded-2xl border border-sky-200 bg-white shadow-lg shadow-sky-100 transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-sky-300/60">
+              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop" alt="Thumbnail AI dalam Bisnis" class="h-44 w-full object-cover" />
+              <div class="p-4">
+                <h3 class="text-xl font-semibold text-sky-700">AI dalam Bisnis</h3>
+                <p class="mt-2 text-sm text-slate-600">Implementasi AI untuk otomasi, analitik, dan keputusan strategis perusahaan.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- ARTICLE CARD 6 -->
+          <article>
+            <a href="video-detail.html#computer-vision" class="group block overflow-hidden rounded-2xl border border-sky-200 bg-white shadow-lg shadow-sky-100 transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-sky-300/60">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop" alt="Thumbnail Computer Vision" class="h-44 w-full object-cover" />
+              <div class="p-4">
+                <h3 class="text-xl font-semibold text-sky-700">Computer Vision</h3>
+                <p class="mt-2 text-sm text-slate-600">Pemanfaatan AI untuk analisis citra dan video pada berbagai sektor industri.</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION ABOUT: Penjelasan singkat AI + gambar (2 kolom) -->
+    <section id="about" class="scroll-mt-24 py-16">
+      <div class="mx-auto grid w-[92%] max-w-7xl gap-8 md:grid-cols-2 md:items-center">
+        <div>
+          <h2 class="text-3xl font-bold">Tentang Artificial Intelligence</h2>
+          <p class="mt-4 text-slate-600">
+            Artificial Intelligence adalah cabang ilmu komputer yang fokus pada pengembangan sistem cerdas agar mampu
+            meniru kemampuan manusia seperti belajar, bernalar, dan mengambil keputusan. AI menjadi fondasi transformasi
+            digital di bidang pendidikan, kesehatan, keamanan, dan bisnis.
+          </p>
+
+          <!-- Audio intro sesuai requirement -->
+          <div class="mt-6 rounded-xl border border-sky-200 bg-white p-4">
+            <p class="mb-3 text-sm font-medium text-sky-700">Audio Intro AI Learning Hub</p>
+            <audio controls class="w-full">
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+              Browser Anda tidak mendukung pemutar audio.
+            </audio>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1673187733777-a0e9e9f6f149?q=80&w=1400&auto=format&fit=crop" alt="Ilustrasi modern AI" class="w-full rounded-2xl border border-sky-200 object-cover shadow-xl shadow-indigo-900/30" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION CONTACT: Form kontak -->
+    <section id="contact" class="scroll-mt-24 py-16">
+      <div class="mx-auto w-[92%] max-w-7xl">
+        <h2 class="text-3xl font-bold">Contact</h2>
+        <p class="mt-2 text-slate-600">Hubungi kami untuk diskusi topik belajar AI yang Anda minati.</p>
+
+        <form action="#" method="post" class="mt-8 grid max-w-3xl gap-4 rounded-2xl border border-sky-200 bg-white p-6">
+          <!-- Input nama -->
+          <label for="nama" class="text-sm font-medium text-slate-200">Nama</label>
+          <input id="nama" name="nama" type="text" required placeholder="Masukkan nama Anda" class="rounded-xl border border-sky-300 bg-white px-4 py-3 text-slate-800 outline-none ring-sky-400 focus:ring" />
+
+          <!-- Input email -->
+          <label for="email" class="text-sm font-medium text-slate-200">Email</label>
+          <input id="email" name="email" type="email" required placeholder="Masukkan email Anda" class="rounded-xl border border-sky-300 bg-white px-4 py-3 text-slate-800 outline-none ring-sky-400 focus:ring" />
+
+          <!-- Select topik -->
+          <label for="topik" class="text-sm font-medium text-slate-200">Pilih Topik</label>
+          <select id="topik" name="topik" class="rounded-xl border border-sky-300 bg-white px-4 py-3 text-slate-800 outline-none ring-sky-400 focus:ring">
+            <option>Pengenalan AI</option>
+            <option>Machine Learning</option>
+            <option>Deep Learning</option>
+            <option>Cybersecurity dan AI</option>
+            <option>AI dalam Bisnis</option>
+          </select>
+
+          <!-- Textarea pesan -->
+          <label for="pesan" class="text-sm font-medium text-slate-200">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda..." class="rounded-xl border border-sky-300 bg-white px-4 py-3 text-slate-800 outline-none ring-sky-400 focus:ring"></textarea>
+
+          <!-- Tombol submit -->
+          <button type="submit" class="mt-2 w-fit rounded-xl bg-gradient-to-r from-sky-500 to-cyan-500 px-6 py-3 font-semibold text-white transition hover:scale-105 hover:shadow-lg hover:shadow-indigo-700/40">
+            Kirim Pesan
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ASIDE: Informasi tambahan -->
+    <aside class="py-16">
+      <div class="mx-auto w-[92%] max-w-7xl rounded-2xl border border-sky-200 bg-white p-6 md:p-8">
+        <h2 class="text-2xl font-bold">Insight Tambahan</h2>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          <article class="rounded-xl border border-cyan-200 bg-cyan-50/70 p-4">
+            <h3 class="font-semibold text-sky-700">Kenapa Belajar AI Penting</h3>
+            <p class="mt-2 text-sm text-slate-600">AI menjadi skill utama era digital dan membuka banyak peluang karier masa depan.</p>
+          </article>
+
+          <article class="rounded-xl border border-cyan-200 bg-cyan-50/70 p-4">
+            <h3 class="font-semibold text-sky-700">Statistik AI Global</h3>
+            <p class="mt-2 text-sm text-slate-600">Adopsi AI terus meningkat di berbagai sektor seperti finansial, kesehatan, dan manufaktur.</p>
+          </article>
+
+          <article class="rounded-xl border border-cyan-200 bg-cyan-50/70 p-4">
+            <h3 class="font-semibold text-sky-700">Tips Belajar AI</h3>
+            <p class="mt-2 text-sm text-slate-600">Mulai dari dasar, praktik proyek kecil, dan konsisten belajar dari video edukatif.</p>
+          </article>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- FOOTER: Informasi copyright -->
+  <footer class="border-t border-sky-200 bg-white py-6 text-center text-sm text-slate-600">
+    <p>&copy; 2026 AI Learning Hub. Dibuat oleh Mahasiswa Pemrograman Website.</p>
+  </footer>
+</body>
+</html>
+
